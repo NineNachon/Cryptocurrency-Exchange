@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const orderController = require('./orderController');
+const orderController = require('../controllers/orderController');
 const authMiddleware = require('../middleware/auth'); // <-- import Middleware
 
 // GET /api/orders  -> ดึงรายการ order ทั้งหมด (ไม่ต้อง login)

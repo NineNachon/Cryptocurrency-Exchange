@@ -4,13 +4,15 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Trade extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      // define association here
+      // 1 Trade เป็นส่วนหนึ่งของ 1 Order
+      Trade.belongsTo(models.Order, { foreignKey: 'order_id' }); // <-- ตรวจสอบว่าตรงนี้ถูกต้อง
+
+      // 1 Trade มีผู้ซื้อ 1 คน
+      Trade.belongsTo(models.User, { as: 'buyer', foreignKey: 'buyer_id' });
+
+      // 1 Trade มีผู้ขาย 1 คน
+      Trade.belongsTo(models.User, { as: 'seller', foreignKey: 'seller_id' });
     }
   }
   Trade.init({
