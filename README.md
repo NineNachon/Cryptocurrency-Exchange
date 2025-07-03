@@ -26,14 +26,13 @@
 
 แผนผังนี้แสดงโครงสร้างและความสัมพันธ์ของตารางข้อมูลหลักในระบบ
 
-
 erDiagram
+    
     Users {
         int id PK
         string username
         string email
     }
-
     Wallets {
         int id PK
         decimal balance "ยอดเงิน"
