@@ -27,7 +27,7 @@
 แผนผังนี้แสดงโครงสร้างและความสัมพันธ์ของตารางข้อมูลหลักในระบบ
 
 
- erDiagram
+erDiagram
     Users {
         int id PK
         string username
@@ -51,9 +51,10 @@
         decimal amount "จำนวน"
     }
 
-    Users ||--o{ Wallets : "มี"
-    Users ||--o{ Orders : "สร้าง"
-    Currencies ||--o{ Wallets : "เป็นของ"
+    Users  Wallets : "มี"
+    Users  Orders : "สร้าง"
+    Currencies  Wallets : "เป็นของ"
+    
 
 ## ⚙️ การติดตั้งและรันโปรเจกต์ (Setup & Run)
 
