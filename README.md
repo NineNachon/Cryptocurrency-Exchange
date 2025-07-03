@@ -26,7 +26,8 @@
 
 แผนผังนี้แสดงโครงสร้างและความสัมพันธ์ของตารางข้อมูลหลักในระบบ
 
-erDiagram
+
+ erDiagram
     Users {
         int id PK
         string username
