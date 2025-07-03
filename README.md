@@ -26,7 +26,6 @@
 
 แผนผังนี้แสดงโครงสร้างและความสัมพันธ์ของตารางข้อมูลหลักในระบบ
 
-```mermaid
 erDiagram
     Users {
         int id PK
@@ -54,7 +53,7 @@ erDiagram
     Users ||--o{ Wallets : "มี"
     Users ||--o{ Orders : "สร้าง"
     Currencies ||--o{ Wallets : "เป็นของ"
-    
+
 ## ⚙️ การติดตั้งและรันโปรเจกต์ (Setup & Run)
 
 ### สิ่งที่ต้องมีก่อน (Prerequisites)
